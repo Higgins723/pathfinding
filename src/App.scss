@@ -1,0 +1,117 @@
+.grid {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #d4d4d4;
+  margin: 0.5px;
+  cursor: pointer;
+}
+
+.box-start {
+  background-color: #17eb53 !important;
+}
+
+.box-finish {
+  background-color: #ff2945 !important;
+}
+
+.box-wall {
+  background-color: #1d2e4f;
+}
+
+.box-visited {
+  animation-name: visitedNode;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedNode {
+  0% {
+    background-color: #633a82;
+  }
+
+  50% {
+    background-color: #72b5b7;
+  }
+
+  100% {
+    background-color: #40e0d0;
+  }
+}
+
+.box-shortest-path {
+  animation-name: showShortestPath;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes showShortestPath {
+  0% {
+    background-color: #6c567b;
+  }
+
+  25% {
+    background-color: #c06c84;
+  }
+
+  50% {
+    background-color: #f67280;
+  }
+
+  100% {
+    background-color: #f8b195;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.description-area {
+  text-align: center;
+  margin-bottom: 30px;
+}
